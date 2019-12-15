@@ -6,7 +6,7 @@ the MSSQL server to which the application connects in the file:
 `DatabaseClient/Database.cs (line 46)`
 
 ## Technologies
-Project is createc with:
+Project is created with:
 * C#
 * XAML
 * SQL (MSSQL)
