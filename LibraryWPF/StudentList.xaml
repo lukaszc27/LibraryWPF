@@ -1,0 +1,33 @@
+﻿<Window x:Class="LibraryWPF.StudentList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryWPF"
+        mc:Ignorable="d"
+        Title="Lista studentów" Height="300" Width="400" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="48" />
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Row="0" Grid.Column="0" x:Name="listView" MouseDoubleClick="listView_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Imię" Width="80" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Nazwisko" Width="80" DisplayMemberBinding="{Binding Surname}" />
+                    <GridViewColumn Header="Numer albumu" Width="120" DisplayMemberBinding="{Binding AlbumNumber}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <WrapPanel Grid.Row="1">
+            <Button Content="Dodaj studenta" Padding="6, 3" Margin="6, 12" Click="AddStudentButton_Click" />
+        </WrapPanel>
+    </Grid>
+</Window>

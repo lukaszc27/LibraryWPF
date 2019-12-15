@@ -1,0 +1,84 @@
+﻿<Window x:Class="LibraryWPF.AddRent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryWPF"
+        mc:Ignorable="d"
+        Title="Dodawanie nowego wypożyczenia" Height="320" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="48" />
+            <RowDefinition Height="48" />
+        </Grid.RowDefinitions>
+
+        <!-- Student -->
+        <GroupBox Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="6,12,6,6" Header="Student">
+            <Grid Margin="0,12,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" TextAlignment="Right" Padding="2">Imię</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0" TextAlignment="Right" Padding="2">Nazwisko</TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="0" TextAlignment="Right" Padding="2">Nr albumu</TextBlock>
+
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="Name" IsEnabled="False" Margin="1" />
+                <TextBox Grid.Row="1" Grid.Column="1" x:Name="Lastname" IsEnabled="False" Margin="1" />
+                <TextBox Grid.Row="2" Grid.Column="1" x:Name="AlbumNumber" IsEnabled="False" Margin="1" />
+
+                <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="12,24" Padding="6" x:Name="StudentChooseButton" Click="StudentChooseButton_Click">Wybierz</Button>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Header="Książka" Margin="6,12,6,6">
+            <Grid Margin="0,12,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" TextAlignment="Right" Margin="2">Tytuł</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0" TextAlignment="Right" Margin="2">Autor</TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="0" TextAlignment="Right" Margin="2">ISBN</TextBlock>
+
+                <TextBox Grid.Row="0" Grid.Column="1" Margin="1" x:Name="BookTitle" IsEnabled="False"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="1" x:Name="BookAuthor" IsEnabled="False" />
+                <TextBox Grid.Row="2" Grid.Column="1" Margin="1" x:Name="BookISBN" IsEnabled="False" />
+
+                <Button Grid.Row="3" Grid.ColumnSpan="2" Margin="12,24" Padding="6" x:Name="BookChooseButton" Click="BookChooseButton_Click">Wybierz</Button>
+            </Grid>
+        </GroupBox>
+
+        <WrapPanel Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock Padding="12,16,3,16">Data wyporzyczenia</TextBlock>
+            <DatePicker Margin="3,12,3,12" x:Name="datePicker" />
+        </WrapPanel>
+        
+        <!-- Przyciski sterowania dialogiem -->
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <Button Content="Dodaj" Margin="6,12,2,12" />
+            <Button Content="Anuluj" Margin="2,12,12,12" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
