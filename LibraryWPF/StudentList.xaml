@@ -29,5 +29,7 @@
         <WrapPanel Grid.Row="1">
             <Button Content="Dodaj studenta" Padding="6, 3" Margin="6, 12" Click="AddStudentButton_Click" />
         </WrapPanel>
+        <Button Content="Eksport" Padding="6,3" Margin="205,11.6,110.6,12.4" x:Name="ExportButton" Click="ExportButton_Click" RenderTransformOrigin="0.504,0.5" Grid.Row="1" />
+        <Button Content="Import" Padding="6,3" Margin="130,11.6,193.6,12.4" x:Name="ImportButton" Click="ImportButton_Click" Grid.Row="1" />
     </Grid>
 </Window>

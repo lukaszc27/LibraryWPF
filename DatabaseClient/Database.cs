@@ -43,7 +43,7 @@ namespace DatabaseClient
         public static void Connect()
         {
             string dbName = "LibraryWPF";
-            string instance = "LUKASZ-KOMPUTER\\SQLEXPRESS";
+            string instance = "DESKTOP-VM4C1FK\\SQLEXPRESS";
 
             string connectionString = $"Data Source={instance};" +
                 "Trusted_Connection=Yes;" +

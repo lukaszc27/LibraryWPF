@@ -30,7 +30,7 @@
         <WrapPanel Grid.Row="1">
             <Button Content="Dodaj książkę" Padding="6,3" Margin="6, 12" Click="AddBookButton_Click"/>
             <Button Content="Import" Padding="6,3" Margin="24,12,3,12" x:Name="ImportButton" Click="ImportButton_Click" />
-            <Button Content="Eksport" Padding="6,3" Margin="3,12" x:Name="ExportButton" Click="ExportButton_Click" />
+            <Button Content="Eksport" Padding="6,3" Margin="3,12" x:Name="ExportButton" Click="ExportButton_Click" RenderTransformOrigin="0.504,0.5" />
         </WrapPanel>
     </Grid>
 </Window>
