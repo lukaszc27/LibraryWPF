@@ -100,11 +100,30 @@ namespace LibraryWPF
             studentList.ShowDialog();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddRentButton_Click(object sender, RoutedEventArgs e)
         {
             AddRent addRent = new AddRent();
             if (addRent.ShowDialog() == true)
             {
+                Rent.Create(Book.Find(addRent.BookISBN.Text).Id,
+                    Student.FindByAlbumNumber(Convert.ToUInt32(addRent.AlbumNumber.Text)).Id,
+                    addRent.datePicker.DisplayDate);
+
+                this.GetRents();    // odświerzamy listę z wyporzyczeniami
+            }
+        }
+
+        /// <summary>
+        /// Dodawanie studenta bezpośrednio z menu kontekstowego okna głównego
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddStudentMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            AddStudent addStudent = new AddStudent();
+            if (addStudent.ShowDialog() == true)
+            {
+                Student.Create(addStudent.Name, addStudent.PersonSurname, addStudent.AlbumNumber);
             }
         }
     }

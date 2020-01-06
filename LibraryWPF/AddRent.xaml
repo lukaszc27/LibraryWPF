@@ -77,8 +77,8 @@
         
         <!-- Przyciski sterowania dialogiem -->
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
-            <Button Content="Dodaj" Margin="6,12,2,12" />
-            <Button Content="Anuluj" Margin="2,12,12,12" Click="Button_Click" />
+            <Button Content="Dodaj" Margin="6,12,2,12" Click="AcceptButtonClick" />
+            <Button Content="Anuluj" Margin="2,12,12,12" Click="RejectButtonClick" />
         </StackPanel>
     </Grid>
 </Window>

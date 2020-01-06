@@ -17,12 +17,12 @@ namespace DatabaseClient
     /// </summary>
     public class Student : IEquatable<Student>
     {
-        public uint AlbumNumber { get; set; }
+        public ulong AlbumNumber { get; set; }
         public uint Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
 
-        public Student(string sName, string sSurname, uint nAlbumNumber = 0, uint nId = 0)
+        public Student(string sName, string sSurname, ulong nAlbumNumber = 0, uint nId = 0)
         {
             Name = sName;
             Surname = sSurname;
@@ -74,7 +74,7 @@ namespace DatabaseClient
         /// <param name="sName">Imię tworzonego studenta</param>
         /// <param name="sSurname">Nazwisko studenta</param>
         /// <param name="nAlbumNumber">Number albumu</param>
-        public static void Create(string sName, string sSurname, uint nAlbumNumber)
+        public static void Create(string sName, string sSurname, ulong nAlbumNumber)
         {
             if (Database.GetInstance() == null)
                 Database.Connect();
@@ -138,6 +138,45 @@ namespace DatabaseClient
                     throw e;
                 }
             }
+        }
+        /// <summary>
+        /// Wyszukanie określonego studenta po numerze albumu 
+        /// </summary>
+        /// <param name="albumNumber">Numer studenta nadany przez uczelnię (unikalny)</param>
+        /// <returns></returns>
+        public static Student FindByAlbumNumber(uint albumNumber)
+        {
+            if (Database.GetInstance() == null)
+                Database.Connect();
+
+            string sql = "SELECT TOP 1 * FROM Students WHERE albumNumber = @albumNumber";
+            using (SqlCommand command = new SqlCommand(sql, Database.GetInstance()))
+            {
+                command.Parameters.Add("@albumNumber", SqlDbType.BigInt);
+                command.Parameters["@albumNumber"].Value = albumNumber;
+
+                try
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Student student = new Student(reader.GetValue(1).ToString(),
+                                reader.GetValue(2).ToString(),
+                                Convert.ToUInt64(reader.GetValue(3)),
+                                Convert.ToUInt32(reader.GetValue(0)));
+
+                            reader.Close();
+                            return student;
+                        }
+                    }
+                }
+                catch(SqlException e)
+                {
+                    throw e;
+                }
+            }
+            return null;
         }
 
         public bool Equals(Student other)

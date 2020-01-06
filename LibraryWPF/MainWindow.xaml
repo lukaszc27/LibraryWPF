@@ -15,7 +15,7 @@
             </MenuItem>
 
             <MenuItem Header="Studenci">
-                <MenuItem Header="Dodaj studenta" />
+                <MenuItem Header="Dodaj studenta" Click="AddStudentMenuItem_Click" />
                 <MenuItem Header="Lista studentów" Click="StudentListMenuItem_Click" />
             </MenuItem>
         </Menu>
@@ -44,7 +44,7 @@
             </ListView>
 
             <WrapPanel Orientation="Horizontal" Grid.Row="1">
-                <Button Padding="6" Margin="12,3" Click="Button_Click">Dodaj wypożyczenie</Button>
+                <Button Padding="6" Margin="12,3" Click="AddRentButton_Click">Dodaj wypożyczenie</Button>
             </WrapPanel>
         </Grid>
     </DockPanel>

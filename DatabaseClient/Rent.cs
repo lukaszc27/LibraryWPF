@@ -55,7 +55,7 @@ namespace DatabaseClient
         /// <param name="student">Student który wyporzycza</param>
         /// <param name="rentDate">Data wyporzyczenia</param>
         /// <returns></returns>
-        public void Create(uint bookId, uint studentId, DateTime rentDate)
+        public static void Create(uint bookId, uint studentId, DateTime rentDate)
         {
             if (Database.GetInstance() == null)
                 Database.Connect();
@@ -72,7 +72,7 @@ namespace DatabaseClient
                 command.Parameters.Add("@studentId", SqlDbType.BigInt);
 
                 command.Parameters["@startDate"].Value = rentDate.Date;
-                command.Parameters["@endDate"].Value = RentDate.AddDays(60).Date;
+                command.Parameters["@endDate"].Value = rentDate.AddDays(60).Date;   // do zmiany (tu będzie bug związany ze zwrotami)
                 command.Parameters["@bookId"].Value = bookId;
                 command.Parameters["@studentId"].Value = studentId;
 
@@ -90,11 +90,6 @@ namespace DatabaseClient
                 }
             }
         }
-
-        /// <summary>
-        /// Zapisuje w bazie utworzony obiekt
-        /// </summary>
-        public void Save() => this.Create(BookId, StudentId, RentDate);
 
         public static ObservableCollection<Rent> All(bool desc = false)
         {

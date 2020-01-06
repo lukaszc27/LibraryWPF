@@ -64,5 +64,8 @@ namespace LibraryWPF
                 BookISBN.Text = bookList.SelectedBook.ISBN;
             }
         }
+
+        private void AcceptButtonClick(object sender, RoutedEventArgs e) => this.DialogResult = true;
+        private void RejectButtonClick(object sender, RoutedEventArgs e) => this.DialogResult = false;
     }
 }
