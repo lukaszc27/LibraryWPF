@@ -193,6 +193,33 @@ namespace DatabaseClient
             return null;
         }
 
+        /// <summary>
+        /// Oznacza zwrot książki w bazie danych
+        /// </summary>
+        /// <returns></returns>
+        public bool Rent()
+        {
+            if (Database.GetInstance() == null)
+                Database.Connect();
+
+            string sql = "UPDATE [Rents] SET [EndDate]=@endDate WHERE [bookId] = @bookId";
+            using (SqlCommand command = new SqlCommand(sql, Database.GetInstance()))
+            {
+                command.Parameters.AddWithValue("@endDate", DateTime.Now);
+                command.Parameters.AddWithValue("@bookId", this.Id);
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    return false;
+                }
+            }
+        }
+
         public bool Equals(Book other)
         {
             if (other == null)

@@ -76,9 +76,29 @@
         </WrapPanel>
         
         <!-- Przyciski sterowania dialogiem -->
-        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+        <!--<StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
             <Button Content="Dodaj" Margin="6,12,2,12" Click="AcceptButtonClick" />
             <Button Content="Anuluj" Margin="2,12,12,12" Click="RejectButtonClick" />
-        </StackPanel>
+        </StackPanel>-->
+
+        <Grid Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <WrapPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right">
+                <Button Content="Dodaj" Margin="6, 12, 3, 12" Padding="6, 3" Click="AcceptButtonClick" />
+                <Button Content="Anuluj" Margin="3, 12, 6, 12" Padding="6, 3" Click="RejectButtonClick" />
+            </WrapPanel>
+
+            <WrapPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">
+                <Button Content="Zwrot książki" Margin="3, 12" Padding="6, 3" Click="ReturnBookButton_Click" x:Name="ReturnButton" />
+            </WrapPanel>
+        </Grid>
     </Grid>
 </Window>
