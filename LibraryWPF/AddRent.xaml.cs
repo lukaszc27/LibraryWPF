@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DatabaseClient;
 
 namespace LibraryWPF
 {
@@ -19,11 +20,20 @@ namespace LibraryWPF
     /// </summary>
     public partial class AddRent : Window
     {
-        public AddRent()
+        public AddRent(Book book = null)
         {
             InitializeComponent();
 
             datePicker.DisplayDate = DateTime.Now;
+
+            if (book == null)
+            {
+                // wybrana książka z listy w celu aktualizacji pokazuje przycisk umożliwiający zwrot
+                ReturnButton.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+            }
         }
 
         /// <summary>
@@ -67,5 +77,10 @@ namespace LibraryWPF
 
         private void AcceptButtonClick(object sender, RoutedEventArgs e) => this.DialogResult = true;
         private void RejectButtonClick(object sender, RoutedEventArgs e) => this.DialogResult = false;
+
+        private void ReturnBookButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello World!");
+        }
     }
 }
