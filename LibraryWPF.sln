@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWPF", "LibraryWPF\Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseClient", "DatabaseClient\DatabaseClient.csproj", "{E15082ED-968F-4CE0-B06C-97F462FF5094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseClientTest", "DatabaseClientTest\DatabaseClientTest.csproj", "{16798446-034B-49BF-8448-2BBDF3E0898B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseClientTests", "DatabaseClientTest\DatabaseClientTests.csproj", "{16798446-034B-49BF-8448-2BBDF3E0898B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
