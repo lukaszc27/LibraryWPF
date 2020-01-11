@@ -126,5 +126,10 @@ namespace LibraryWPF
                 Student.Create(addStudent.Name, addStudent.PersonSurname, addStudent.AlbumNumber);
             }
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

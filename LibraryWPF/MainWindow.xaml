@@ -29,7 +29,7 @@
                 <RowDefinition Height="48" />
             </Grid.RowDefinitions>
 
-            <ListView Margin="12,6,12,12" x:Name="listView">
+            <ListView Margin="12,6,12,12" x:Name="listView" SelectionChanged="ListView_SelectionChanged">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Tytuł" Width="75" DisplayMemberBinding="{Binding Book.Title}" />
@@ -38,7 +38,7 @@
                         <GridViewColumn Header="Numer albumu" Width="65" DisplayMemberBinding="{Binding Student.AlbumNumber}" />
                         <GridViewColumn Header="Imię" Width="75" DisplayMemberBinding="{Binding Student.Name}" />
                         <GridViewColumn Header="Nazwisko" Width="75" DisplayMemberBinding="{Binding Student.Surname}" />
-                        <GridViewColumn Header="Data wyporzyczenia" Width="75" DisplayMemberBinding="{Binding RentDate}" />
+                        <GridViewColumn Header="Data wypożyczenia" Width="75" DisplayMemberBinding="{Binding RentDate}" />
                     </GridView>
                 </ListView.View>
             </ListView>
