@@ -129,7 +129,9 @@ namespace LibraryWPF
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            Rent rent = (Rent)sender;
+            AddRent dlg = new AddRent(Book.Find(rent.Book.ISBN));
+            dlg.Show();
         }
     }
 }

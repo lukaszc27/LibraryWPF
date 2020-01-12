@@ -197,7 +197,7 @@ namespace DatabaseClient
         /// Oznacza zwrot książki w bazie danych
         /// </summary>
         /// <returns></returns>
-        public bool Rent()
+        public void Rent()
         {
             if (Database.GetInstance() == null)
                 Database.Connect();
@@ -211,11 +211,10 @@ namespace DatabaseClient
                 try
                 {
                     command.ExecuteNonQuery();
-                    return true;
                 }
                 catch (SqlException ex)
                 {
-                    return false;
+                    throw ex;
                 }
             }
         }
@@ -230,6 +229,7 @@ namespace DatabaseClient
 
             return false;
         }
+
         public override bool Equals(object obj)
         {
             if (obj == null)

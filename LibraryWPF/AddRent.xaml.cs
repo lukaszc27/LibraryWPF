@@ -31,9 +31,6 @@ namespace LibraryWPF
                 // wybrana książka z listy w celu aktualizacji pokazuje przycisk umożliwiający zwrot
                 ReturnButton.Visibility = Visibility.Hidden;
             }
-            else
-            {
-            }
         }
 
         /// <summary>

@@ -71,12 +71,12 @@ references:
   commentId: T:LibraryWPF.AddRent
   fullName: LibraryWPF.AddRent
   nameWithType: AddRent
-- uid: LibraryWPF.AddRent.#ctor
-  name: AddRent()
-  href: api/LibraryWPF.AddRent.html#LibraryWPF_AddRent__ctor
-  commentId: M:LibraryWPF.AddRent.#ctor
-  fullName: LibraryWPF.AddRent.AddRent()
-  nameWithType: AddRent.AddRent()
+- uid: LibraryWPF.AddRent.#ctor(DatabaseClient.Book)
+  name: AddRent(Book)
+  href: api/LibraryWPF.AddRent.html#LibraryWPF_AddRent__ctor_DatabaseClient_Book_
+  commentId: M:LibraryWPF.AddRent.#ctor(DatabaseClient.Book)
+  fullName: LibraryWPF.AddRent.AddRent(DatabaseClient.Book)
+  nameWithType: AddRent.AddRent(Book)
 - uid: LibraryWPF.AddRent.#ctor*
   name: AddRent
   href: api/LibraryWPF.AddRent.html#LibraryWPF_AddRent__ctor_
