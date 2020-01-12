@@ -56,5 +56,34 @@ namespace UnitTest
 
             Assert.AreEqual(student1, student2);
         }
+
+        // testowanie operatorów na książkach
+
+        [TestMethod]
+        public void BooksTwoObjectSame()
+        {
+            Book book1 = new Book("1234-567-890-1", "C# Programowanie", "Anomin");
+            Book book2 = new Book("1234-567-890-1", "C# Programowanie", "Anomin");
+
+            Assert.AreEqual(book1, book2);
+        }
+
+        [TestMethod]
+        public void BooksTwoObjectsDifferent()
+        {
+            Book book1 = new Book("1234-567-89", "C++ Qt wzorce projektowe", "Anonim");
+            Book book2 = new Book("1234-567-88", "C++ Qt, wxWidgets - Wykorzystaj potęgę aplikacji graficznych!", "Anonim");
+
+            Assert.AreNotEqual(book1, book2);
+        }
+        
+        [TestMethod]
+        public void BooksOperatorAssign()
+        {
+            Book book1 = new Book("1234-567-89", "C++ Qt wzorce projektowe", "Anonim");
+            Book book2 = book1;
+
+            Assert.AreEqual(book1, book2);
+        }
     }
 }
