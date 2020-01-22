@@ -39,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_80428ED4C8E643E8B7ADBD543751F4E1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_962A871352854000BC9D199C9F2C6FD2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -216,6 +222,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80428ED4C8E643E8B7ADBD543751F4E1"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\icons8-bookmark-book-64.ico"
+            "TargetName" = "8:icons8-bookmark-book-64.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_9C6EDF79F55B4B64B5ABCDD9CF8B730B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -284,7 +310,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Library installer"
         "ProductCode" = "8:{5B334E38-F263-41FF-B02C-2A571BC9B373}"
-        "PackageCode" = "8:{64B3C85D-F5F9-420F-A2CC-2ACC715079A4}"
+        "PackageCode" = "8:{C0F5182B-054C-4A1C-A063-F14B340F67CE}"
         "UpgradeCode" = "8:{2598B474-83D3-46C0-AC06-5ECF0CDB53F5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -404,20 +430,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_14C7E6CCF9DE40A6918A8D8A5C80E9E0"
-            {
-            "Name" = "8:DatabaseClient"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_962A871352854000BC9D199C9F2C6FD2"
-            "Folder" = "8:_7D14E3E9C1C04295B749A64BC0506E3B"
-            "WorkingFolder" = "8:_9C6EDF79F55B4B64B5ABCDD9CF8B730B"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1B51955A2A594A968DFA8738A5F90832"
             {
             "Name" = "8:LibraryWPF"
@@ -429,21 +441,7 @@
             "Target" = "8:_67CEAAE64EBB4111B084A9902BC148BC"
             "Folder" = "8:_BAF851D12D324944899F546EC91A9CE0"
             "WorkingFolder" = "8:_9C6EDF79F55B4B64B5ABCDD9CF8B730B"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_52A4A6C3F4CB481FBD081FF50296334D"
-            {
-            "Name" = "8:DatabaseClient"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_962A871352854000BC9D199C9F2C6FD2"
-            "Folder" = "8:_BAF851D12D324944899F546EC91A9CE0"
-            "WorkingFolder" = "8:_9C6EDF79F55B4B64B5ABCDD9CF8B730B"
-            "Icon" = "8:"
+            "Icon" = "8:_80428ED4C8E643E8B7ADBD543751F4E1"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F5BB329951634206BDB5466E842B3380"
@@ -457,7 +455,7 @@
             "Target" = "8:_67CEAAE64EBB4111B084A9902BC148BC"
             "Folder" = "8:_7D14E3E9C1C04295B749A64BC0506E3B"
             "WorkingFolder" = "8:_9C6EDF79F55B4B64B5ABCDD9CF8B730B"
-            "Icon" = "8:"
+            "Icon" = "8:_80428ED4C8E643E8B7ADBD543751F4E1"
             "Feature" = "8:"
             }
         }
